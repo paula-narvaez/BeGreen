@@ -1,0 +1,45 @@
+#clima{
+    width:300px ;
+    height: 77px;
+    border-radius: 43px;
+    background-color: darkcyan;
+}
+#comuna{
+    padding-left: 27px;
+    font-size: 20px;
+    padding-bottom: 20px;
+    width:30px;
+    height: 30px;
+}
+
+#temperatura{
+    padding-left: 20px;
+    font-size: 25px;
+    width: 30px;
+    margin-right: 0px;
+    display: flex;
+}
+#icono{
+    width: 10px;
+    height: 5px;
+    margin-left: 30px;
+    
+}
+#estado{
+    padding-left: 60px;
+    padding-top: 28px;
+    font-size: 25px;
+    
+}
+#imagen{
+    width: 80px;
+    height: 80px;
+    margin-bottom: 85px;
+   
+    
+}
+.container {
+    display: flex;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 10px;
+  }
