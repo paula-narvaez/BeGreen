@@ -130,6 +130,7 @@ h1, h2, h3, h4, h5, h6, [class^='heading-'] {
 	font-weight: 700;
 	color: #151515;
 	letter-spacing: 0;
+	justify-content: center;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, [class^='heading-'] a {
@@ -3274,6 +3275,7 @@ ul.blog-post-meta li .icon {
 .breadcrumbs-custom-title {
 	text-shadow: 0 4px 4px rgba(21, 21, 21, 0.25);
 	text-transform: none;
+	justify-content: center;
 }
 
 .breadcrumbs-custom-path {
