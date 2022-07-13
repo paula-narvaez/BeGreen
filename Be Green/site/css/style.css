@@ -20,6 +20,16 @@
 	color: #ffffff;
 }
 
+.titulo-cat{
+	justify-content: center;
+	align-items: center;
+	text-shadow: 0 4px 4px rgba(21, 21, 21, 0.25);
+	text-transform: none;
+	margin-left: 45%;
+}
+
+
+
 a:focus,
 button:focus {
 	outline: none !important;
@@ -3276,6 +3286,7 @@ ul.blog-post-meta li .icon {
 	text-shadow: 0 4px 4px rgba(21, 21, 21, 0.25);
 	text-transform: none;
 	justify-content: center;
+	align-items: center;
 }
 
 .breadcrumbs-custom-path {
@@ -3338,6 +3349,8 @@ ul.blog-post-meta li .icon {
 @media (max-width: 991.98px) {
 	.breadcrumbs-custom-title {
 		font-size: 26px;
+		text-align: center;
+		justify-content: center;
 	}
 }
 
