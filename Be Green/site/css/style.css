@@ -24,6 +24,10 @@ a:focus,
 button:focus {
 	outline: none !important;
 }
+.ola{
+	position: absolute;
+	margin-top: 900px;
+}
 
 button::-moz-focus-inner {
 	border: 0;
@@ -4451,7 +4455,7 @@ html [class*='section-'].section-bottom-0 {
 	right: 0;
 	bottom: -2px;
 	height: 66px;
-	background-image: url("../images/decor-wave-bottom.png");
+	
 }
 
 .section-main-bunner .main-bunner-title {
