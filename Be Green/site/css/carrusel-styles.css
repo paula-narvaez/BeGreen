@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+body .productos-car{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.productos-car{
+    position: relative;
+    height: 500px;
+    width: 1200px;
+    float: left;
+    display: flex;
+    align-items: center;
+    
+}
+
+.swiper{
+    width:10000px;
+}
+.productos-car .card .image-pr{
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    padding:3px ;
+    background-color:  #7FBC4E;
+}
+
+.productos-car .card .image-pr img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+.card{
+    position: relative;
+    background: #fff;
+    border-radius:20px ;
+    margin: 20px 0;
+}
+
+.card::before{
+    content: "";
+    position: absolute;
+    height: 30%;
+    width: 100%;
+    background: #7FBC4E;
+    border-radius: 20px 20px 0 0;
+}
+
+.card .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    position: relative;
+    z-index: 100;
+}
+
+.card .media-icons{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card .media-icons i{
+    color: #fff;
+    opacity: 0.6;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card .media-icons i:hover{
+    opacity: 1;
+}
+
+.card .nombre-prod{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    margin-top: 10px;
+}
+
+.nombre-prod .nombre{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nombre-prod .descripcion{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.card .rating{
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+}
+.card .rating i{
+    font-size: 18px;
+    margin: 0 2px;
+    color: #7FBC4E;
+}
+
+.card .button-pr{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.card .button-pr button{
+    background: #7FBC4E;
+    outline: none;
+    border: none;
+    color: #fff;
+    padding: 8px 22px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition:all 0.3s ease ;
+    cursor: pointer;
+}
+
+.button-pr button:hover{
+    background:  #79b647;
+}
+.swiper-pagination-bullet{
+    height: 7px;
+    width: 26;
+    border-radius:25px ;
+    background:#7FBC4E;
+}
+
+.swiper-button-next, .swiper-button-prev{
+    opacity: 0.7;
+    color: #7FBC4E;
+    transition: all 0.3s ease;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover{
+    opacity: 1;
+    color: #7FBC4E;
+}
