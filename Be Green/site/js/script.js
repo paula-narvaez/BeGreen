@@ -317,13 +317,13 @@
 		if (plugins.rdMailForm.length) {
 			var i, j, k,
 				msg = {
-					'MF000': 'Successfully sent!',
-					'MF001': 'Recipients are not set!',
-					'MF002': 'Form will not work locally!',
-					'MF003': 'Please, define email field in your form!',
-					'MF004': 'Please, define type of your form!',
-					'MF254': 'Something went wrong with PHPMailer!',
-					'MF255': 'Aw, snap! Something went wrong.'
+					'MF000': '¡Enviado con éxito!',
+					'MF001': '¡Los destinatarios no están configurados!',
+					'MF002': '¡El formulario no funcionará localmente!',
+					'MF003': '¡Por favor, define el campo de correo electrónico en tu formulario!',
+					'MF004': '¡Por favor, define el tipo de tu formulario!',
+					'MF254': '¡¡¡Algo salió mal con PHPMailer!!!',
+					'MF255': 'Algo salió mal'
 				};
 
 			for (i = 0; i < plugins.rdMailForm.length; i++) {
@@ -353,8 +353,8 @@
 							if (captcha.length) {
 								var captchaToken = captcha.find('.g-recaptcha-response').val(),
 									captchaMsg = {
-										'CPT001': 'Please, setup you "site key" and "secret key" of reCaptcha',
-										'CPT002': 'Something wrong with google reCaptcha'
+										'CPT001': 'Por favor, configure su "clave de sitio" y "clave secreta" de reCaptch',
+										'CPT002': 'Algo anda mal con google reCaptcha'
 									};
 
 								formHasCaptcha = true;
@@ -469,5 +469,21 @@
 
 	});
 
+	$(document).ready(function(){
+
+		var ubicacion = navigator.geolocation.getCurrentPosition(function(info){
+			var latitud = info.coords.latitude;
+			var longitud = info.coords.longitude;
+			var temp = document.getElementById("temperatura")
+		
 	
+			$.getJSON(`https://api.openweathermap.org/data/2.5/weather?lat=${latitud}&lon=${longitud}&units=metric&appid=68a417ccd8493e33698b951ac65f49c4`, function(data){
+				console.log(data)
+				var temperatura = data.main.temp;
+				temp.innerHTML =   "Temperatura: "+temperatura+"°C";
+			})
+		
+		})
+	
+	})
 }());
