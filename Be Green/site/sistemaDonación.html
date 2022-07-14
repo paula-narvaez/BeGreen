@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Sistema de donación</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/959562345963733056/959586596397654097/Simple_Blanco_Moderno_Abstracto_Logo_3.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Poppins:300,300i,400,500,600,700,800,900,900i%7CRoboto:400%7CRubik:100,400,700">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
@@ -36,20 +38,25 @@
                   <!-- RD Navbar Toggle-->
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a href="index.html"><img class="brand-logo-light" src="images/logo-inverse-415x103.png" alt="" width="207" height="51"/></a></div>
+                  <div class="rd-navbar-brand"><a href="index.html"><img class="brand-logo-light" src="https://cdn.discordapp.com/attachments/959562345963733056/959586596397654097/Simple_Blanco_Moderno_Abstracto_Logo_3.png" alt="" width="100" height="51"/></a></div>
                 </div>
                 <div class="rd-navbar-main-element">
                   <div class="rd-navbar-nav-wrap">
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
                       <li class="rd-nav-item"><a class="rd-nav-link" href="sobreNosotros.html">SOBRE NOSOTROS</a></li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="#">INFORME DE TRANSPARENCIA</a></li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacto.html">CONTACTO</a></li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="donadores.html">DONADORES</a></li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="#">PRODUCTOS</a></li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="#contact">CONTACTO</a></li>
                     </ul>
                   </div>
                 </div>
                 <!-- Linea de división -->
                 <div class="linea"></div>
+                <!--Tiempo-->
+                <div class="api-temp" id="temperatura"> 
+                  <i class="fa-duotone fa-temperature-half"></i>
+              </div>
                 <!-- RD Navbar bottons-->
                 <a class="button button-primary button-sm" href="hazteDonador.html">HAZTE DONADOR</a>
               </div>
@@ -58,28 +65,84 @@
         </div>
       </header>
       <!-- Base typography -->
-      <section class="parallax-container" data-parallax-img="images/bg-breadcrumbs-about1.jpg">
+      <section class="parallax-container" data-parallax-img="https://cdn.discordapp.com/attachments/959562345963733056/959564642781368370/76290.webp">
         <div class="parallax-content breadcrumbs-custom context-dark">
           <div class="container">
+            
             <div class="row justify-content-center">
+
               <div class="col-12 col-lg-9">
+                
                 <h2 class="breadcrumbs-custom-title">Gracias por tu ayuda</h2>
-                <p>Una ejecutiva te contactará para hacer efectiva tu donación mensual</p>
+                <br>
                 <div class="login-register">
-                  <p>R.U.N</p>
-                  <input class="controls" type="text" name="rut" id="rut" placeholder="Ingrese su RUN">
-                  <p>Nombre y Apellido</p>
-                  <input class="controls" type="text" name="nombreCompleto" id="nombreCompleto" placeholder="Ingrese su Nombre y Apellido">
-                  <p>Correo</p>
-                  <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-                  <p>Número de tarjeta</p>
-                  <input class="controls" type="text" name="numeroTarjeta" id="numeroTarjeta" placeholder="1234567890123456">
-                  <p>Seleccione un banco</p>
-                  <input class="controls" type="text" name="banco" id="banco" placeholder="-----">
-                  <p>Tu donación</p>
-                  <input class="controls" type="text" name="rut" id="rut" placeholder="$">
+		<form action="" class="formulario" id="formulario">
+			<!-- Grupo: Nombre -->
+			<div class="formulario__grupo" id="grupo__usuario">
+				<label for="nombres" class="formulario__label">Nombres</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="nombres" id="nombres" placeholder="Pedro Pablo">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Debe Ingresar Nombres Validos</p>
+			</div>
+
+			<!-- Grupo: Apellidos -->
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="apellidos" class="formulario__label">Apellidos</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="apellidos" id="apellidos" placeholder="Hormazabal Rodriguez">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Debe Ingresar Apellidos Validos.</p>
+			</div>
+
+			<!-- Grupo: Monto-->
+			<div class="formulario__grupo" id="monto">
+				<label for="monto" class="formulario__label">Monto a donar</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="monto" id="monto">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Ingrese Monto.</p>
+			</div>
+
+			<!-- Grupo: Correo Electronico -->
+			<div class="formulario__grupo" id="grupo__correo">
+				<label for="correo" class="formulario__label">Correo Electrónico</label>
+				<div class="formulario__grupo-input">
+					<input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Ingrese Correo Valido.</p>
+			</div>
+			<!-- Grupo: Teléfono -->
+			<div class="formulario__grupo" id="grupo__telefono">
+				<label for="telefono" class="formulario__label">Teléfono</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="9XXXXXXXX">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Ingrese Telefono Valido.</p>
+			</div>
+      <br>
+			<!-- Grupo: Terminos y Condiciones -->
+			<div class="formulario__grupo" id="grupo__terminos">
+				<label class="formulario__label">
+					<input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+					Acepto los Terminos y Condiciones
+				</label>
+			</div>
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+			</div>
+
+			<div class="formulario__grupo formulario__grupo-btn-enviar">
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+			</div>
+		</form>
                   <!-- BOTON DONAR -->
-                  <a class="button button-primary button-sm" href="index.html">DONAR</a>
+                  <a class="button button-primary button-sm" href="">ENVIAR</a>
                 </div>
               </div>
             </div>
@@ -91,14 +154,13 @@
         <div class="container wow-outer">
           <div class="wow fadeIn">
             <div class="row row-50 row-lg-60">
-              <div class="col-12"><a href="index.html"><img src="images/logo-inverse-415x103.png" alt="" width="207" height="51"/></a></div>
+              <div class="col-12"><a href="index.html"><img src="https://cdn.discordapp.com/attachments/943714816843997185/996915602822271116/Diseno_sin_titulo_2.png" alt="" width="207" height="51"/></a></div>
               <div class="col-12">
                 <ul class="footer-minimal-nav">
                   <li><a href="sobreNosotros.html">SOBRE NOSOTROS</a></li>
-                  <li><a href="#">CAUSAS</a></li>
-                  <li><a href="#">GALERÍA</a></li>
-                  <li><a href="#">EQUIPO</a></li>
-                  <li><a href="contacto.html">CONTACTOS</a></li>
+                  <li><a href="iniciarSesionDonador.html">DONADORES</a></li>
+                  <li><a href="productos.html">PRODUCTOS</a></li>
+                  <li><a href="">CONTACTOS</a></li>
                 </ul>
               </div>
               <div class="col-12">
@@ -111,7 +173,7 @@
                 </ul>
               </div>
             </div>
-            <p class="rights"><span>&copy;&nbsp;</span><span>Copyright&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>.&nbsp;</span><span>Todos los derechos reservados.</span><span>&nbsp;</span>Proyecto&nbsp;de&nbsp;<a href="">Ingeniería de Software - DUOC UC</a></p>
+            <p class="rights"><span>&copy;&nbsp;</span><span>Copyright&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>.&nbsp;</span><span>Todos los derechos reservados.</span><span>&nbsp;</span>Proyecto&nbsp;de&nbsp;</p>
           </div>
         </div>
       </footer>
@@ -119,6 +181,5 @@
     <div class="snackbars" id="form-output-global"></div>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
-    <!-- by Constanza Painevilo Jamett -->
   </body>
 </html>
