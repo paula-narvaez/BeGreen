@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <head>
-    <title>Iniciar Sesión</title>
+    <title>Donadores</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,39 +37,52 @@
                   <!-- RD Navbar Toggle-->
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a href="index.html"><img class="brand-logo-light" src="images/logo-inverse-415x103.png" alt="" width="207" height="51"/></a></div>
+                  <div class="rd-navbar-brand"><a href="index.html"><img class="brand-logo-light" src="https://cdn.discordapp.com/attachments/959562345963733056/959586596397654097/Simple_Blanco_Moderno_Abstracto_Logo_3.png" alt="" width="100" height="51"/></a></div>
+                </div> 
+                <!--Tiempo-->
+                <div class="api-temp" id="temperatura"> 
+                  <i class="fa-duotone fa-temperature-half"></i>
                 </div>
                 <div class="rd-navbar-main-element">
                   <div class="rd-navbar-nav-wrap">
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="#"></a></li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="sobreNosotros.html">SOBRE NOSOTROS</a></li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="#">INFORME DE TRANSPARENCIA</a></li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacto.html">CONTACTO</a></li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="iniciarSesionDonador.html">DONADORES</a></li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="#">PRODUCTOS</a></li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="#contact">CONTACTO</a></li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="#">|</a></li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">CERRAR SESIÓN</a></li>
                     </ul>
                   </div>
                 </div>
-                <!-- Linea de división -->
-                <div class="linea"></div>
-                <!-- RD Navbar bottons-->
-                <a class="button button-primary button-sm" href="hazteDonador.html">HAZTE DONADOR</a>
               </div>
             </div>
           </nav>
         </div>
       </header>
-      <!-- Base typography -->
-      <section class="parallax-container" data-parallax-img="images/bg-breadcrumbs-about1.jpg">
+      <section class="parallax-container" data-parallax-img="https://cdn.discordapp.com/attachments/959562345963733056/959564642781368370/76290.webp">
         <div class="parallax-content breadcrumbs-custom context-dark">
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-12 col-lg-9">
-                <h2 class="breadcrumbs-custom-title">Iniciar Sesión</h2>
-                <div class="login-login">
-                  <input class="controls" type="text" name="usuario" value="" placeholder="Usuario">
-                  <input class="controls" type="password" name="contrasena" value="" placeholder="Contraseña">
-                  <a class="button button-primary button-sm" href="personalDeSalud.html">INGRESAR</a>
-                </div>
+                <h2 class="breadcrumbs-custom-title">!Bienvenido!</h2>
+                <p>Donaciones realizadas por ti</p>
+                <table>
+                  <tr>
+                    <th>ID</th>
+                    <th>FECHA</th>
+                    <th>MONTO</th>
+                    <th>TARJETA</th>
+                  </tr>
+                  <tr>
+                    <td>D001</td>
+                    <td>14/07/2022</td>
+                    <td>$20.000</td>
+                    <td>4589</td>
+                  </tr>
+                </table>
               </div>
             </div>
           </div>
@@ -79,14 +93,13 @@
         <div class="container wow-outer">
           <div class="wow fadeIn">
             <div class="row row-50 row-lg-60">
-              <div class="col-12"><a href="index.html"><img src="images/logo-inverse-415x103.png" alt="" width="207" height="51"/></a></div>
+              <div class="col-12"><a href="index.html"><img src="https://cdn.discordapp.com/attachments/943714816843997185/996915602822271116/Diseno_sin_titulo_2.png" alt="" width="207" height="51"/></a></div>
               <div class="col-12">
                 <ul class="footer-minimal-nav">
-                  <li><a href="sobreNosotros.html">SOBRE NOSOTROS</a></li>
-                  <li><a href="#">CAUSAS</a></li>
-                  <li><a href="#">GALERÍA</a></li>
-                  <li><a href="#">EQUIPO</a></li>
-                  <li><a href="contacto.html">CONTACTOS</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="sobreNosotros.html">SOBRE NOSOTROS</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="donadores.html">DONADORES</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="#">PRODUCTOS</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="#contact">CONTACTO</a></li>
                 </ul>
               </div>
               <div class="col-12">
@@ -99,7 +112,7 @@
                 </ul>
               </div>
             </div>
-            <p class="rights"><span>&copy;&nbsp;</span><span>Copyright&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>.&nbsp;</span><span>Todos los derechos reservados.</span><span>&nbsp;</span>Proyecto&nbsp;de&nbsp;<a href="">Ingeniería de Software - DUOC UC</a></p>
+            <p class="rights"><span>&copy;&nbsp;</span><span>Copyright&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>.&nbsp;</span><span>Todos los derechos reservados.</span><span>&nbsp;</span>Proyecto&nbsp;de&nbsp;<a href="">Programación Web - DUOC UC</a></p>
           </div>
         </div>
       </footer>
@@ -107,6 +120,6 @@
     <div class="snackbars" id="form-output-global"></div>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
-    <!-- by Constanza Painevilo Jamett -->
+  
   </body>
 </html>

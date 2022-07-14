@@ -24,6 +24,10 @@ a:focus,
 button:focus {
 	outline: none !important;
 }
+.ola{
+	position: absolute;
+	margin-top: 900px;
+}
 
 button::-moz-focus-inner {
 	border: 0;
@@ -4958,9 +4962,7 @@ html [class*='section-'].section-bottom-0 {
 	padding-top: 0;
 }
 
-.bg-gray-1-decor {
-	position: relative;
-}
+
 
 .bg-gray-1-decor:before {
 	content: '';

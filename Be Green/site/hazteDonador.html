@@ -2,11 +2,12 @@
 <html class="wide wow-animation" lang="en">
   
   <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Hazte Donador</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/959562345963733056/959586596397654097/Simple_Blanco_Moderno_Abstracto_Logo_3.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Poppins:300,300i,400,500,600,700,800,900,900i%7CRoboto:400%7CRubik:100,400,700">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
@@ -16,7 +17,7 @@
   </head>
   
   <body>
-    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="Está utilizando un navegador obsoleto. Para una experiencia de navegación más rápida y segura, actualice."></a></div>
     <div class="preloader">
       <div class="preloader-body">
         <div class="cssload-container">
@@ -38,20 +39,25 @@
                   <!-- RD Navbar Toggle-->
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a href="index.html"><img class="brand-logo-light" src="images/logo-inverse-415x103.png" alt="" width="207" height="51"/></a></div>
+                  <div class="rd-navbar-brand"><a href="index.html"><img class="brand-logo-light" src="https://cdn.discordapp.com/attachments/959562345963733056/959586596397654097/Simple_Blanco_Moderno_Abstracto_Logo_3.png" alt="" width="100" height="51"/></a></div>
                 </div>
                 <div class="rd-navbar-main-element">
                   <div class="rd-navbar-nav-wrap">
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
                       <li class="rd-nav-item"><a class="rd-nav-link" href="sobreNosotros.html">SOBRE NOSOTROS</a></li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="#">INFORME DE TRANSPARENCIA</a></li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacto.html">CONTACTO</a></li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="iniciarSesionDonador.html">DONADORES</a></li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="productos.html">PRODUCTOS</a></li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="#contact" >CONTACTO</a></li>
                     </ul>
                   </div>
                 </div>
                 <!-- Linea de división -->
                 <div class="linea"></div>
+                <!--Tiempo-->
+                <div class="api-temp" id="temperatura"> 
+                  <i class="fa-duotone fa-temperature-half"></i>
+                </div>
                 <!-- RD Navbar bottons-->
                 <a class="button button-primary button-sm" href="iniciarSesion.html">INICIAR SESIÓN</a>
               </div>
@@ -60,21 +66,18 @@
         </div>
       </header>
       <!--  -->
-      <section class="parallax-container" data-parallax-img="images/bg-breadcrumbs-about1.jpg">
+      <section class="parallax-container" data-parallax-img="https://cdn.discordapp.com/attachments/959562345963733056/959564642781368370/76290.webp">
         <div class="parallax-content breadcrumbs-custom context-dark">
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-12 col-lg-9">
-                <h3 class="breadcrumbs-custom-title">INSCRÍBETE PARA SER DONADOR DE LA FUNDACIÓN APOYO</h3>
-                <p>¡HOY TE NECESITAMOS MÁS QUE NUNCA!<br>ENTRE TODOS CUIDEMOS A LAS PERSONAS MAYORES MÁS VULNERABLES DEL PAÍS.</p>
+                <h3 class="breadcrumbs-custom-title">¡REGISTRATE PARA SER DONADOR O DA TU DONACIÓN DIRECTA!</h3>
+                <p>¡HOY TE NECESITAMOS MÁS QUE NUNCA!<br>PUEDES HACER UNA DONACIÓN</p>
                 <br>
-                <p>Selecciona una opción:</p>
+                <p>Presiona aqui abajo</p>
                 <div id="contenedorOpcionDonador">
                   <div id="cuentaCorriente">
-                    <a class="section section-banner d-none d-xl-flex" href="sistemaDonación.html" >DONACIÓN ÚNICA</a>
-                  </div>
-                  <div id="tarjetaCredito">
-                    <a class="section section-banner d-none d-xl-flex" href="sistemaDonación.html" >DONACIÓN MENSUAL</a>
+                    <a class="section section-banner d-none d-xl-flex" href="sistemaDonación.html" >REALIZAR DONACIÓN MONETARIA</a>
                   </div>
               </div>
             </div>
@@ -89,49 +92,98 @@
               <div class="col-12 col-lg-9">
                 <h2 class="breadcrumbs-custom-title">Registrate como donador</h2>
                 <div class="login-register">
-                  <p>Nombre</p>
-                  <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
-                  <p>Apellido</p>
-                  <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
-                  <p>R.U.N</p>
-                  <input class="controls" type="text" name="rut" id="rut" placeholder="Ingrese su RUN">
-                  <p>Correo</p>
-                  <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-                  <p>Contraseña</p>
-                  <input class="controls" type="password" name="contrasena" id="contrasena" placeholder="Ingrese su Contraseña">
-                  <p>Repita contraseña</p>
-                  <input class="controls" type="password2" name="contrasena2" id="contrasena2" placeholder="Vuelva a escribir su Contraseña">
-                  <a class="button button-primary button-sm" href="index.html">REGISTRAR</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                  <form action="" class="formulario" id="formulario">
+                    <!-- Grupo: Usuario -->
+                    <div class="formulario__grupo" id="grupo__usuario">
+                      <label for="usuario" class="formulario__label">Usuario</label>
+                      <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="john123">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                      </div>
+                      <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 caracteres.</p>
+                    </div>
+              
+                    <!-- Grupo: Nombre -->
+                    <div class="formulario__grupo" id="grupo__nombre">
+                      <label for="nombre" class="formulario__label">Nombre</label>
+                      <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John Doe">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                      </div>
+                      <p class="formulario__input-error">Ingrese un usuario válido.</p>
+                    </div>
+              
+                    <!-- Grupo: Contraseña -->
+                    <div class="formulario__grupo" id="grupo__password">
+                      <label for="password" class="formulario__label">Contraseña</label>
+                      <div class="formulario__grupo-input">
+                        <input type="password" class="formulario__input" name="password" id="password">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                      </div>
+                      <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+                    </div>
+              
+                    <!-- Grupo: Contraseña 2 -->
+                    <div class="formulario__grupo" id="grupo__password2">
+                      <label for="password2" class="formulario__label">Repetir Contraseña</label>
+                      <div class="formulario__grupo-input">
+                        <input type="password" class="formulario__input" name="password2" id="password2">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                      </div>
+                      <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+                    </div>
+              
+                    <!-- Grupo: Correo Electronico -->
+                    <div class="formulario__grupo" id="grupo__correo">
+                      <label for="correo" class="formulario__label">Correo Electrónico</label>
+                      <div class="formulario__grupo-input">
+                        <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                      </div>
+                      <p class="formulario__input-error">Ingrese email válido.</p>
+                    </div>
+              
+                    <!-- Grupo: Teléfono -->
+                    <div class="formulario__grupo" id="grupo__telefono">
+                      <label for="telefono" class="formulario__label">Teléfono</label>
+                      <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="9XXXXXXXX">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                      </div>
+                      <p class="formulario__input-error">Ingrese número válido..</p>
+                    </div>
+              
+                    <!-- Grupo: Terminos y Condiciones -->
+                    <div class="formulario__grupo" id="grupo__terminos">
+                      <label class="formulario__label">
+                        <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+                        Acepto los Terminos y Condiciones
+                      </label>
+                    </div>
+              
+                    <div class="formulario__mensaje" id="formulario__mensaje">
+                      <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+                    </div>
+              
+                    <div class="formulario__grupo formulario__grupo-btn-enviar">
+                      <a class="button button-primary button-sm" href="">ENVIAR</a>
+                      <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+                    </div>
+                  </form>
       </section>
-      <!-- HTML Text Elements-->
-      <section class="section section-lg bg-default">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-10">
-              <h4>¿En qué se convierte tu ayuda?</h4>
-              <img src="images/tuAyuda.PNG"> 
-            </div>
-          </div>
-        </div>
-      </section>
+
       <!-- Page Footer-->
       <footer class="section footer-minimal context-dark">
         <div class="container wow-outer">
           <div class="wow fadeIn">
             <div class="row row-50 row-lg-60">
-              <div class="col-12"><a href="index.html"><img src="images/logo-inverse-415x103.png" alt="" width="207" height="51"/></a></div>
+              <div class="col-12"><a href="index.html"><img src="https://cdn.discordapp.com/attachments/943714816843997185/996915602822271116/Diseno_sin_titulo_2.png" alt="" width="207" height="51"/></a></div>
               <div class="col-12">
                 <ul class="footer-minimal-nav">
                   <li><a href="sobreNosotros.html">SOBRE NOSOTROS</a></li>
-                  <li><a href="#">CAUSAS</a></li>
-                  <li><a href="#">GALERÍA</a></li>
-                  <li><a href="#">EQUIPO</a></li>
-                  <li><a href="contacto.html">CONTACTOS</a></li>
+                  <li><a href="iniciarSesionDonador.html">DONADORES</a></li>
+                  <li><a href="productos.html">PRODUCTOS</a></li>
+                  <li><a href="">CONTACTOS</a></li>
                 </ul>
               </div>
               <div class="col-12">
@@ -144,7 +196,7 @@
                 </ul>
               </div>
             </div>
-            <p class="rights"><span>&copy;&nbsp;</span><span>Copyright&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>.&nbsp;</span><span>Todos los derechos reservados.</span><span>&nbsp;</span>Proyecto&nbsp;de&nbsp;<a href="">Ingeniería de Software - DUOC UC</a></p>
+            <p class="rights"><span>&copy;&nbsp;</span><span>Copyright&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>.&nbsp;</span><span>Todos los derechos reservados.</span><span>&nbsp;</span>Proyecto&nbsp;de&nbsp;<a href="">Programación Web - DUOC UC</a></p>
           </div>
         </div>
       </footer>
@@ -152,6 +204,5 @@
     <div class="snackbars" id="form-output-global"></div>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
-    <!-- by Constanza Painevilo Jamett -->
   </body>
 </html>
