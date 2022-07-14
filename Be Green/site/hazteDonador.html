@@ -71,16 +71,13 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-12 col-lg-9">
-                <h3 class="breadcrumbs-custom-title">INSCRÍBETE PARA SER DONADOR DE BE GREEN</h3>
-                <p>¡HOY TE NECESITAMOS MÁS QUE NUNCA!<br>PUEDES DAR UNA DONACIÓN CON PLANTA O MONETARIA.</p>
+                <h3 class="breadcrumbs-custom-title">¡REGISTRATE PARA SER DONADOR O DA TU DONACIÓN DIRECTA!</h3>
+                <p>¡HOY TE NECESITAMOS MÁS QUE NUNCA!<br>PUEDES HACER UNA DONACIÓN</p>
                 <br>
-                <p>Selecciona una opción:</p>
+                <p>Presiona aqui abajo</p>
                 <div id="contenedorOpcionDonador">
                   <div id="cuentaCorriente">
-                    <a class="section section-banner d-none d-xl-flex" href="sistemaDonación.html" >DONACIÓN MONETARIA</a>
-                  </div>
-                  <div id="tarjetaCredito">
-                    <a class="section section-banner d-none d-xl-flex" href="sistemaDonación.html" >DONACIÓN PLANTA</a>
+                    <a class="section section-banner d-none d-xl-flex" href="sistemaDonación.html" >REALIZAR DONACIÓN MONETARIA</a>
                   </div>
               </div>
             </div>
@@ -95,36 +92,86 @@
               <div class="col-12 col-lg-9">
                 <h2 class="breadcrumbs-custom-title">Registrate como donador</h2>
                 <div class="login-register">
-                  <p>Nombre</p>
-                  <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
-                  <p>Apellido</p>
-                  <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
-                  <p>R.U.N</p>
-                  <input class="controls" type="text" name="rut" id="rut" placeholder="Ingrese su RUN">
-                  <p>Correo</p>
-                  <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-                  <p>Contraseña</p>
-                  <input class="controls" type="password" name="contrasena" id="contrasena" placeholder="Ingrese su Contraseña">
-                  <p>Repita contraseña</p>
-                  <input class="controls" type="password2" name="contrasena2" id="contrasena2" placeholder="Vuelva a escribir su Contraseña">
-                  <a class="button button-primary button-sm" href="index.html">REGISTRAR</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                  <form action="" class="formulario" id="formulario">
+                    <!-- Grupo: Usuario -->
+                    <div class="formulario__grupo" id="grupo__usuario">
+                      <label for="usuario" class="formulario__label">Usuario</label>
+                      <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="john123">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                      </div>
+                      <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 caracteres.</p>
+                    </div>
+              
+                    <!-- Grupo: Nombre -->
+                    <div class="formulario__grupo" id="grupo__nombre">
+                      <label for="nombre" class="formulario__label">Nombre</label>
+                      <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John Doe">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                      </div>
+                      <p class="formulario__input-error">Ingrese un usuario válido.</p>
+                    </div>
+              
+                    <!-- Grupo: Contraseña -->
+                    <div class="formulario__grupo" id="grupo__password">
+                      <label for="password" class="formulario__label">Contraseña</label>
+                      <div class="formulario__grupo-input">
+                        <input type="password" class="formulario__input" name="password" id="password">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                      </div>
+                      <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+                    </div>
+              
+                    <!-- Grupo: Contraseña 2 -->
+                    <div class="formulario__grupo" id="grupo__password2">
+                      <label for="password2" class="formulario__label">Repetir Contraseña</label>
+                      <div class="formulario__grupo-input">
+                        <input type="password" class="formulario__input" name="password2" id="password2">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                      </div>
+                      <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+                    </div>
+              
+                    <!-- Grupo: Correo Electronico -->
+                    <div class="formulario__grupo" id="grupo__correo">
+                      <label for="correo" class="formulario__label">Correo Electrónico</label>
+                      <div class="formulario__grupo-input">
+                        <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                      </div>
+                      <p class="formulario__input-error">Ingrese email válido.</p>
+                    </div>
+              
+                    <!-- Grupo: Teléfono -->
+                    <div class="formulario__grupo" id="grupo__telefono">
+                      <label for="telefono" class="formulario__label">Teléfono</label>
+                      <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="9XXXXXXXX">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                      </div>
+                      <p class="formulario__input-error">Ingrese número válido..</p>
+                    </div>
+              
+                    <!-- Grupo: Terminos y Condiciones -->
+                    <div class="formulario__grupo" id="grupo__terminos">
+                      <label class="formulario__label">
+                        <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+                        Acepto los Terminos y Condiciones
+                      </label>
+                    </div>
+              
+                    <div class="formulario__mensaje" id="formulario__mensaje">
+                      <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+                    </div>
+              
+                    <div class="formulario__grupo formulario__grupo-btn-enviar">
+                      <a class="button button-primary button-sm" href="">ENVIAR</a>
+                      <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+                    </div>
+                  </form>
       </section>
-      <!-- HTML Text Elements-->
-      <section class="section section-lg bg-default">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-10">
-              <h4>¿En qué se convierte tu ayuda?</h4>
-              <img src="images/tuAyuda.PNG"> 
-            </div>
-          </div>
-        </div>
-      </section>
+
       <!-- Page Footer-->
       <footer class="section footer-minimal context-dark">
         <div class="container wow-outer">
@@ -136,7 +183,7 @@
                   <li><a href="sobreNosotros.html">SOBRE NOSOTROS</a></li>
                   <li><a href="iniciarSesionDonador.html">DONADORES</a></li>
                   <li><a href="productos.html">PRODUCTOS</a></li>
-                  <li><a href="contacto.html">CONTACTOS</a></li>
+                  <li><a href="">CONTACTOS</a></li>
                 </ul>
               </div>
               <div class="col-12">

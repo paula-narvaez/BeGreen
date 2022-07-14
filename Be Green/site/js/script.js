@@ -491,16 +491,20 @@
 const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
+	nombres: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 	usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+	apellidos: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+	monto: /^.{4,12}$/, // 4 a 12 digitos.
 	password: /^.{4,12}$/, // 4 a 12 digitos.
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	telefono: /^\d{7,14}$/ // 7 a 14 numeros.
 }
 
 const campos = {
-	usuario: false,
-	nombre: false,
+	nombres: false,
+	usuario:false,
+	apellidos: false,
+	monto:false,
 	password: false,
 	correo: false,
 	telefono: false
@@ -511,12 +515,19 @@ const validarFormulario = (e) => {
 		case "usuario":
 			validarCampo(expresiones.usuario, e.target, 'usuario');
 		break;
-		case "nombre":
-			validarCampo(expresiones.nombre, e.target, 'nombre');
+		case "nombres":
+			validarCampo(expresiones.nombres, e.target, 'nombres');
+		break;
+		case "apellidos":
+			validarCampo(expresiones.apellidos, e.target, 'apellidos');
 		break;
 		case "password":
 			validarCampo(expresiones.password, e.target, 'password');
 			validarPassword2();
+		break;
+		case "monto":
+			validarCampo(expresiones.password, e.target, 'monto');
+			validarMonto();
 		break;
 		case "password2":
 			validarPassword2();
@@ -578,7 +589,7 @@ formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 
 	const terminos = document.getElementById('terminos');
-	if(campos.usuario && campos.nombre && campos.password && campos.correo && campos.telefono && terminos.checked ){
+	if(campos.nombres && campos.usuario && campos.apellidos && campos.password && campos.correo && campos.telefono && terminos.checked ){
 		formulario.reset();
 
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
@@ -594,5 +605,7 @@ formulario.addEventListener('submit', (e) => {
 	}
 });
 
+
 	
 }());
+
